@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Task.destroy_all
+Todo.destroy_all
 
 9.times do |i|
     Task.create(

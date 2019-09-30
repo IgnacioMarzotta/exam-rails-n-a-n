@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+
+body
+{
+    background-image: url('https://thumbs.gfycat.com/OffensiveZanyBengaltiger-size_restricted.gif');
+    z-index: 0;
+}
+
+.alert
+{
+    margin-right: 3%;
+    margin-left: 3%;
+    z-index: 1;
+}
+
+.card-deck
+{
+    margin-left: 3%;
+    margin-right: 3%;
+}

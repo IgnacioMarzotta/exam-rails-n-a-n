@@ -1,0 +1,27 @@
+<br>
+<br>
+<% @all_todos.each_slice(3) do |three_todos| %>
+  <div class="card-deck">
+    <% three_todos.each do |todo| %>
+      <div class="card border border-primary">
+        <img src="<%= todo.task.photo %>" class="card-img-top" alt="Task Image">
+        <div class="card-body">
+          <h5 class="card-title"><%= todo.task.name %></h5>
+          <div class="container">
+            <% if (user_signed_in?) %>
+                <% if(todo.completed == false) %>
+                    <%= link_to 'NO Listo', complete_todo_path(todo), class: 'badge badge-danger' %>
+                <% else %>
+                    <%= link_to 'Listo', complete_todo_path(todo), class: 'badge badge-success' %>
+                <% end %>
+              <%= link_to 'Ver la tarea', todo.task, class: 'btn btn-primary btn-sm' %>
+            <% else %>
+              <%= link_to 'Ver la tarea', todo.task, class: 'btn btn-primary btn-sm' %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end  %>
+  </div>
+  <br>
+<% end %>
