@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Task.destroy_all
+
+9.times do |i|
+    Task.create(
+        name: "Task #{i+1}",
+        description: "This is task n°#{i+1}'s description",
+        photo: "http://lorempixel.com/400/200/sports/#{i+1}"
+    )
+end
